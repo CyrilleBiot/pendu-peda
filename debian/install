@@ -1,0 +1,6 @@
+source/pendu-py usr/bin/
+source/pendu-peda.py usr/share/applications/pendu-peda/
+source/*.gif usr/share/applications/pendu-peda/images/
+source/*.txt usr/share/applications/pendu-peda/data-files/
+source/pendu-peda.png /usr/share/applications/pendu-peda/
+source/pendu-peda.6.gz usr/share/man/man6/

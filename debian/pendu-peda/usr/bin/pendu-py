@@ -1,0 +1,3 @@
+#/bin/sh
+cd  /usr/share/applications/pendu-peda/
+/usr/bin/python3 /usr/share/applications/pendu-peda/pendu-peda.py 

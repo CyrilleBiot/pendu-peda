@@ -1,0 +1,94 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: paquet source pendu-peda
+dpkg-buildpackage: info: version source 1.0.0+nmu4
+dpkg-buildpackage: info: distribution source unstable
+dpkg-buildpackage: info: source changé par  <ragnarok@Fenrir.home>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: architecture hôte amd64
+dpkg-source: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section générale dans le fichier info
+dpkg-source: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section du paquet dans le fichier info
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+ dpkg-source -b .
+dpkg-source: avertissement: aucun format source indiqué dans debian/source/format, voir dpkg-source(1)
+dpkg-source: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section générale dans le fichier info
+dpkg-source: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section du paquet dans le fichier info
+dpkg-source: avertissement: répertoire source « PENDU » n'est pas <paquet_source>-<version_amont> « pendu-peda-1.0.0+nmu4 »
+dpkg-source: info: utilisation du format source « 1.0 »
+dpkg-source: info: construction de pendu-peda dans pendu-peda_1.0.0+nmu4.tar.gz
+dpkg-source: avertissement: information manquante pour le champ de sortie Standards-Version
+dpkg-source: info: construction de pendu-peda dans pendu-peda_1.0.0+nmu4.dsc
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section générale dans le fichier info
+dpkg-gencontrol: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section du paquet dans le fichier info
+dpkg-gencontrol: avertissement: champ Depends du paquet pendu-peda : substitution variable ${shlibs:Depends} used, but is not defined
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'pendu-peda' in '../pendu-peda_1.0.0+nmu4_all.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../pendu-peda_1.0.0+nmu4_amd64.changes
+dpkg-genchanges: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section générale dans le fichier info
+dpkg-genchanges: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section du paquet dans le fichier info
+dpkg-genchanges: info: inclusion du code source original dans l'envoi (« upload »)
+ dpkg-source --after-build .
+dpkg-source: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section générale dans le fichier info
+dpkg-source: avertissement: champ d'information inconnu « Version » dans les données d'entrée de section du paquet dans le fichier info
+dpkg-buildpackage: info: envoi complet ; paquet Debian natif (inclusion du code source complet)
+Now running lintian pendu-peda_1.0.0+nmu4_amd64.changes ...
+E: pendu-peda changes: changed-by-name-missing <ragnarok@Fenrir.home>
+E: pendu-peda: extended-description-is-empty
+E: pendu-peda source: no-standards-version-field
+W: pendu-peda: binary-without-manpage usr/bin/pendu-py
+W: pendu-peda source: changelog-should-mention-nmu
+W: pendu-peda: description-too-long
+W: pendu-peda: executable-not-elf-or-script usr/bin/pendu-py
+W: pendu-peda source: extra-whitespace-around-name-in-changelog-trailer
+W: pendu-peda source: file-without-copyright-information source/CE-fran??ais-verbe-ir.txt
+W: pendu-peda source: file-without-copyright-information source/CE-fran??ais-verbe1erG.txt
+W: pendu-peda source: file-without-copyright-information source/autre-anglais.txt
+W: pendu-peda source: file-without-copyright-information source/autre-liste-francais.txt
+W: pendu-peda source: file-without-copyright-information source/cm-geographie-consommer-en-france.txt
+W: pendu-peda source: file-without-copyright-information source/cm-maths-nombres.txt
+W: pendu-peda source: file-without-copyright-information source/cm-maths-polygone.txt
+W: pendu-peda source: file-without-copyright-information source/cm-nat.txt
+W: pendu-peda source: file-without-copyright-information source/cm_histoire-moyen-age.txt
+W: pendu-peda source: file-without-copyright-information source/copyright
+W: pendu-peda source: file-without-copyright-information source/pendu-peda.6.gz
+W: pendu-peda source: file-without-copyright-information source/pendu-peda.png
+W: pendu-peda source: file-without-copyright-information source/pendu-peda.py
+W: pendu-peda source: file-without-copyright-information source/pendu-py
+W: pendu-peda source: file-without-copyright-information source/pendu_0.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_1.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_10.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_2.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_3.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_4.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_5.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_6.gif
+W: pendu-peda source: file-without-copyright-information source/pendu_7.gif
+W: pendu-peda: manpage-has-bad-whatis-entry usr/share/man/man6/pendu-peda.6.gz
+W: pendu-peda source: missing-debian-source-format
+W: pendu-peda source: package-needs-versioned-debhelper-build-depends 11
+W: pendu-peda: wrong-bug-number-in-closes l27:#XXXXXX
+Finished running lintian.

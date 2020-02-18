@@ -1,0 +1,29 @@
+pendu-peda (1.0.0+nmu4) unstable; urgency=medium
+
+  * Fix desktop bugs
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 19:05:58 +0100
+
+pendu-peda (1.0.0+nmu3) unstable; urgency=medium
+
+  * Fix bash launcher 
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 18:56:40 +0100
+
+pendu-peda (1.0.0+nmu2) unstable; urgency=medium
+
+  * Fix bugs 
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 18:49:17 +0100
+
+pendu-peda (1.0.0+nmu1) unstable; urgency=medium
+
+  * First package 
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 18:44:17 +0100
+
+pendu-peda (1.0.0) unstable; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ --  <cyrille@cbiot.fr>  Tue, 18 Feb 2020 18:42:36 +0100

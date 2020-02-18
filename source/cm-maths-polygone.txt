@@ -1,0 +1,14 @@
+# CM
+# Mathématiques
+# Les polygones
+triangle
+carré
+losange
+parallélogramme
+isocèle
+équilatéral
+perpendiculaire
+pentagramme
+hexagone
+diagonale
+quadrilatère
