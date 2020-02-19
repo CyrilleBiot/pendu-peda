@@ -1,3 +1,9 @@
+pendu-peda (1.0.1) unstable; urgency=medium
+
+  * Fix path troubles
+
+ --  <ragnarok@Fenrir.home>  Wed, 19 Feb 2020 09:50:44 +0100
+
 pendu-peda (1.0.0+nmu4) unstable; urgency=medium
 
   * Fix desktop bugs
