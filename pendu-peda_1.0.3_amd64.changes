@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Wed, 19 Feb 2020 12:26:54 +0100
+Source: pendu-peda
+Binary: pendu-peda
+Architecture: source all
+Version: 1.0.3
+Distribution: unstable
+Urgency: medium
+Maintainer: Cyrille Biot <cyrille@cbiot.fr>
+Changed-By: <ragnarok@Fenrir.home>
+Description:
+ pendu-peda - Hangman game with as themes the learning areas of cycles 2 and 3
+Changes:
+ pendu-peda (1.0.3) unstable; urgency=medium
+ .
+   * Fix path desktop
+Checksums-Sha1:
+ d290e3cab87496170595f1139c7a7bfcc04adae5 545 pendu-peda_1.0.3.dsc
+ 454f4b2583a8328c70fcbe7a1746b1e3da222d92 128352 pendu-peda_1.0.3.tar.gz
+ 5c39792c531e76b6407b65bbf0b7ab2d38b32165 114764 pendu-peda_1.0.3_all.deb
+ 26f7b34c1449767a9e84ebef372d639ff5637911 4964 pendu-peda_1.0.3_amd64.buildinfo
+Checksums-Sha256:
+ d3050b7412514c387c1052bae24ae8ea5f39e052602b410a880e481b2c667286 545 pendu-peda_1.0.3.dsc
+ c6ff806248043dd4d2d654fb5f8c92853bc0b9b70e5b3d55c01aca72cf7086c1 128352 pendu-peda_1.0.3.tar.gz
+ b48a14eb3f15a55b4a19bea3354c5d60408c341e2b287992ad3b224f57d83e90 114764 pendu-peda_1.0.3_all.deb
+ a8a47f1fabf236f7cfc557e0be7d64a3de7e77da8b83ff7e30c409cb069ca4d3 4964 pendu-peda_1.0.3_amd64.buildinfo
+Files:
+ e9bc3cf12dc87856657fe24eb62f13d3 545 education optional pendu-peda_1.0.3.dsc
+ 6f951ff0f6f1fea9a50e8cc191b28a1a 128352 education optional pendu-peda_1.0.3.tar.gz
+ 1bf0efe4a5fa9ef73ee385b9ec5675ea 114764 education optional pendu-peda_1.0.3_all.deb
+ cbb2e468864558611500fa9fb76a39d1 4964 education optional pendu-peda_1.0.3_amd64.buildinfo

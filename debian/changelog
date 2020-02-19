@@ -1,3 +1,15 @@
+pendu-peda (1.0.3) unstable; urgency=medium
+
+  * Fix path desktop
+
+ --  <ragnarok@Fenrir.home>  Wed, 19 Feb 2020 12:26:54 +0100
+
+pendu-peda (1.0.2) unstable; urgency=medium
+
+  * Fix size png desktop
+
+ --  <ragnarok@Fenrir.home>  Wed, 19 Feb 2020 12:22:29 +0100
+
 pendu-peda (1.0.1) unstable; urgency=medium
 
   * Fix path troubles

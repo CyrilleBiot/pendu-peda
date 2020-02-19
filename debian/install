@@ -3,5 +3,5 @@ source/pendu-peda.py usr/share/pendu-peda/
 source/pendu-peda.png usr/share/pendu-peda/
 source/*.gif usr/share/pendu-peda/images/
 source/*.txt usr/share/pendu-peda/data-files/
-source/pendu-peda.desktop /usr/share/applications/pendu-peda.desktop
+source/pendu-peda.desktop /usr/share/applications/
 source/pendu-peda.6.gz usr/share/man/man6/

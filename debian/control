@@ -1,13 +1,13 @@
 Source: pendu-peda
 Section: education
-Version: 1.0.1
+Version: 1.0.3
 Priority: optional
 Maintainer: Cyrille Biot <cyrille@cbiot.fr>
 Build-Depends: debhelper (>= 9)
 Homepage: https://github.com/CyrilleBiot/pendu-peda
 
 Package: pendu-peda
-Version: 1.0.1
+Version: 1.0.3
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, python3, python3-tk
 Homepage: https://github.com/CyrilleBiot/pendu-peda
