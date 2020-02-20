@@ -8,10 +8,16 @@ Chevalier
 Ecuyer
 Noblesse
 Clergé
-Chateau-Fort
+Chateau
 Tournoi
 Adoubement
 Fortresse
 Croisade
 Serf
 Servitude
+Monarchie
+Divin
+Absolue
+Eglise
+Souverain
+Suzerain

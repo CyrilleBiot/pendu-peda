@@ -2,7 +2,8 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pendu-peda
 Source: https://github.com/CyrilleBiot/pendu-peda
  
-Files: debian/*
+Files: *
+
 Copyright: 2019 Cyrille Biot <cyrille@cbiot.fr>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify

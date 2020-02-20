@@ -22,3 +22,5 @@ unité
 millier
 million
 milliard
+pourcentage
+fraction

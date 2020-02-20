@@ -9,27 +9,40 @@
     Sous licence contrat Creative Commons. (cf FAQ de son site)
     Modifié et adpaté par Cyrille BIOT.
 """
-__author__ = "Cyrille BIOT <cyrille@cbiot.fr>, MULLER Didier"
+__author__ = "Cyrille BIOT <cyrille@cbiot.fr>"
 __copyright__ = "Copyleft"
 __credits__ = "Cyrille BIOT <cyrille@cbiot.fr>"
 __license__ = "GPL"
-__version__ = "1.0.0"
-__date__ = "2020/02/17"
+__version__ = "1.0.6"
+__date__ = "2020/02/20"
 __maintainer__ = "Cyrille BIOT <cyrille@cbiot.fr>"
 __email__ = "cyrille@cbiot.fr"
 __status__ = "Devel"
-from tkinter import *
+
+import os, shutil
 from random import choice
-import os
 from operator import itemgetter
 import unicodedata
 import tkinter as tk
+from tkinter import *
 from tkinter import ttk
 
+# Copie des fichiers de conf dans le /home/ de l'user
+# afin que celui ci puisse en rajouter
+# La configuration est stockée dans /home/$user/.primtux/pendu-peda/data-files/
+user = os.environ["USER"]
+repertoire = '/home/' + user + '/.primtux/pendu-peda'
+if not os.path.exists(repertoire):
+    print("Le repertoire n'existe pas. On le créer")
+    shutil.copytree('/usr/share/pendu-peda/data-files/', '/home/' + user + '/.primtux/pendu-peda/data-files/' )
+else:
+    print("Le repertoire existe. Configuration OK.")
 
+
+# Initialisation des variables globales
 score = 0
 essai = 0
-repData = 'data-files'
+repData = '/home/' + user + '/.primtux/pendu-peda/data-files'
 file = 'autre-liste-francais.txt'
 sujet = 'Général'
 
@@ -50,6 +63,8 @@ def creerMatrice():
     matriceCM = []
     matriceCE = []
     matriceAUTRE = []
+
+    # Recuperation des entetes
     for fichiers in os.listdir(repData):
         with open(str(repData) + '/' + str(fichiers)) as f :
             listing = []
@@ -58,6 +73,7 @@ def creerMatrice():
             listing.append(fichiers)
             matrice.append(listing)
 
+    # Creation de 3 listes (une par niveau)
     for i in matrice:
         if 'CM' in (i[0]):
             matriceCM.append(i)
@@ -65,15 +81,17 @@ def creerMatrice():
             matriceCE.append(i)
         elif 'AUTRE' in i[0]:
             matriceAUTRE.append(i)
+    # Tri de ces listes
     matriceCM = sorted(matriceCM, key=itemgetter(1))
     matriceCE = sorted(matriceCE, key=itemgetter(1))
     matriceAUTRE = sorted(matriceAUTRE, key=itemgetter(1))
     return matriceCM, matriceCE, matriceAUTRE, file
 
-
-def lettre_dans_mot(lettre):
+def lettre_dans_mot(lettre, bouton):
     global partie_en_cours, mot_partiel, mot_choisi, nb_echecs, image_pendu, score, essai
     if partie_en_cours:
+        print("bouton",bouton)
+        bouton.configure(state="disabled") # Desactive le bouton si cliqué
         nouveau_mot_partiel = ""
         lettre_dans_mot = False
         i = 0
@@ -107,7 +125,6 @@ def lettre_dans_mot(lettre):
             essai += 1
             #return file
 
-
 def afficher_mot(mot):
     global lettres, essai
     mot_large = ""
@@ -128,9 +145,6 @@ def change():
     texte.configure(text=afficherScore())
 
 def afficherTheme(file,sujet):
-    messageTheme = "Thème : " + str(sujet)
-    #print(messageTheme)
-    print('debug:', file)
     return file, sujet
 
 def changeTheme(file, sujet):
@@ -139,17 +153,17 @@ def changeTheme(file, sujet):
     fileZone.configure(text=file)
 
 def recupFile():
-    print(theme.cget('textvariable'))
-    print(fileZone.cget('textvariable'))
+    # Nouvelle partie associée au bouton REJOUER
     f = fileZone.cget('text')
     t = theme.cget('text')
+    for i in range(26): # On remet les boutons en actif
+        bouton[i].configure(state="normal")
     init_jeu(f,t)
 
 
 def init_jeu(file, sujet):
     global mot_choisi, mot_partiel, image_pendu, lettres, repData
     global nb_echecs, partie_en_cours, liste_mots
-    print("AAAAAAAAAAAAAA",repData, file, sujet)
     nb_echecs = 0
     partie_en_cours = True
     liste_mots = definirFichier(repData, file, sujet)
@@ -163,13 +177,12 @@ def init_jeu(file, sujet):
     image_pendu.image = photo
     afficherScore()
     afficherTheme(file, sujet)
-    print("file:",file,' = ',sujet)
     print("mot:",mot_choisi)
     return file
 
-
-
+# ======================================================================
 # INTERFACE GRAPHIQUE
+# ======================================================================
 
 root = tk.Tk()
 root.title("Le jeu du pendu")
@@ -202,19 +215,14 @@ canevas = Canvas(f1, bg='white', height=500, width=620)
 canevas.pack(side=BOTTOM)
 bouton = [0] * 26
 for i in range(26):
-    bouton[i] = ttk.Button(f1, text=chr(i + 65), width=2
-                           , command=lambda x=i + 65: lettre_dans_mot(chr(x)))
+    bouton[i] = ttk.Button(f1, text=chr(i + 65), width=2, state='normal'
+                           , command=lambda x=i + 65, y=i: lettre_dans_mot(chr(x), bouton[y]))
     bouton[i].pack(side=LEFT)
-
-
 
 photo = PhotoImage(file="images/pendu_0.gif")
 image_pendu = Label(canevas, image=photo, border=0)
 image_pendu.place(x=120, y=140)
 lettres = canevas.create_text(320, 60, text="", fill='black', font='Courrier 30')
-
-
-
 
 # ONGLET 2 : Les options
 # Parse et recup data du dossier de config
@@ -226,16 +234,13 @@ boutonMatriceCE = [0] * int(len(matriceCE))
 textMatriceAUTRE = [0] * int(len(matriceAUTRE))
 boutonMatriceAUTRE = [0] * int(len(matriceAUTRE))
 
-
-
-
 # Colonne CM
 textCM = ttk.Label(f2, text="Niveaux CM", width=35, font='Courrier 10')
 textCM.grid(row=0,column=1, sticky=W)
 zone = tk.Frame(f2, padx=2, pady=2, height=2, width=200, bd=1, relief=SUNKEN)
 a = 1
 for i in range(len(matriceCM)):
-    textMatriceCM[i] = ttk.Label(zone, text=matriceCM[i][3], width=35, font='Courrier 8')
+    textMatriceCM[i] = ttk.Label(zone, text=matriceCM[i][2], width=35, font='Courrier 8')
     textMatriceCM[i].grid(row=a, column=0,sticky=W)
     boutonMatriceCM[i] = ttk.Button(zone, text="ok", width=2 , command=lambda x=matriceCM[i][3], y=matriceCM[i][2] : init_jeu(x,y))
     boutonMatriceCM[i].grid(row=a, column=1, sticky=W)
@@ -270,8 +275,11 @@ zone2.grid(row=1,column=3,sticky=NW)
 
 # ONLET 3 : Configuration
 message = __doc__ + '\n'
+message += ('- - ' * 10) + '\n'
 message += "Auteur(s) : " + __author__ + '\n'
+message += ('- - ' * 10) + '\n'
 message += "Copyright : " + __copyright__ + '\n'
+message += ('- - ' * 10) + '\n'
 message += "Crédits : " + __credits__ + '\n'
 message += "Licence : " + __license__ + '\n'
 message += "Version : " + __version__ + '\n'
@@ -279,21 +287,22 @@ message += "Date : " + __date__ + '\n'
 message += "Mainteneur : " + __maintainer__ + '\n'
 message += "Mail : " + __email__ + '\n'
 message += "Status : " + __status__ + '\n'
+message += ('- - ' * 10) + '\n'
+message += 'Adapter votre configuration en ajoutant vos fichiers dans ce répertoire : ' + '\n'
+message += repertoire + '/\n'
 
-labelApropos = tk.Label(f3 , text=message, font='Courrier 10', wraplength=500)
+labelApropos = tk.Label(f3 , text=message, font='Courrier 10', justify='left')
 labelApropos.pack(side=TOP)
 
 # Bouton OK / QUITTER
 bouton2 = ttk.Button(f1, text='Quitter', command=root.quit)
 bouton2.pack(side=RIGHT)
-# bouton1 = ttk.Button(f1, text='Rejouer', command=lambda x=matriceCM[i][3], y=matriceCM[i][2] : init_jeu(x,y))
 bouton1 = ttk.Button(f1, text='Rejouer', command=recupFile)
 bouton1.pack(side=RIGHT)
 
-print("DEBUF", fileZone.cget('text'))
-
-
+# ======================================================================
 # Lancement Application
+# ======================================================================
 file = init_jeu(file,sujet)
 root.mainloop()
 root.destroy()

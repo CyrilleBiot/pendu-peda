@@ -8,7 +8,10 @@ parallélogramme
 isocèle
 équilatéral
 perpendiculaire
+parallèle
 pentagramme
 hexagone
 diagonale
 quadrilatère
+rectangle
+trapèze

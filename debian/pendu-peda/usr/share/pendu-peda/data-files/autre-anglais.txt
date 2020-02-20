@@ -1,6 +1,6 @@
 # AUTRE
 # Anglais
-# Vocabulaire
+# Vocabulaire d'Anglais
 mouse
 pinapple
 house
@@ -9,3 +9,6 @@ mushroom
 bathroom
 student
 teatcher
+turkey
+donkey
+monkey

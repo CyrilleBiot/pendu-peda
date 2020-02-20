@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Thu, 20 Feb 2020 17:25:23 +0100
+Source: pendu-peda
+Binary: pendu-peda
+Architecture: source all
+Version: 1.0.6+nmu1
+Distribution: unstable
+Urgency: medium
+Maintainer: Cyrille Biot <cyrille@cbiot.fr>
+Changed-By: <ragnarok@Fenrir.home>
+Description:
+ pendu-peda - Hangman game with as themes the learning areas of cycles 2 and 3
+Changes:
+ pendu-peda (1.0.6+nmu1) unstable; urgency=medium
+ .
+   * Non-maintainer upload.
+   * Disabled letters when used.
+   * Local config dir (/home/$user/.primtux/pendu-peda/data-files/)
+   * Add data files (U.E.)
+Checksums-Sha1:
+ 2a53bfd96ffa8fa3a9bab1d10e30e350f8272cc5 565 pendu-peda_1.0.6+nmu1.dsc
+ f104dff5582dfbb6ca93b8b4f760c1cd35c50489 129036 pendu-peda_1.0.6+nmu1.tar.gz
+ b8e80dd42dff457a8ba09b3675d784286196676f 115364 pendu-peda_1.0.6+nmu1_all.deb
+ a9241c573d1e6de17245cb01e28f5a28d43fabce 4999 pendu-peda_1.0.6+nmu1_amd64.buildinfo
+Checksums-Sha256:
+ 472755e5e13219b2dc7e458bc5f7649f7203854b86cc1847d15e6fa6c1f6acdb 565 pendu-peda_1.0.6+nmu1.dsc
+ 27d9ac66154113b8042545a363a22c27fc860b1c4756d64c485ef7cc701b20ab 129036 pendu-peda_1.0.6+nmu1.tar.gz
+ 5b0abf6c772676c06e3a3726dcc7ed1711eceef86aaeceba1ad51ede70e72f70 115364 pendu-peda_1.0.6+nmu1_all.deb
+ 86fa515ce223ae719e3f2b146c492e33d268e19405ab879618931131c99ec91b 4999 pendu-peda_1.0.6+nmu1_amd64.buildinfo
+Files:
+ 4393f7717c1ca83160826f7fef1d93a3 565 education optional pendu-peda_1.0.6+nmu1.dsc
+ c61b0d4b73eecfbd87487afd1adfca6f 129036 education optional pendu-peda_1.0.6+nmu1.tar.gz
+ 4438b8df4ec1ff44612241241ed2047b 115364 education optional pendu-peda_1.0.6+nmu1_all.deb
+ 0237c2936fbed4dbcf28dc2ebe0b5284 4999 education optional pendu-peda_1.0.6+nmu1_amd64.buildinfo
