@@ -1,3 +1,22 @@
+pendu-peda (1.0.5+nmu1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload. Fix changelog bug
+
+ --  <ragnarok@Fenrir.home>  Thu, 20 Feb 2020 13:42:34 +0100
+
+pendu-peda (1.0.5) UNRELEASED; urgency=medium
+
+  [ ragnarok@Fenrir.home ]
+  * Fix bugs
+
+ --  <ragnarok@Fenrir.home>  Thu, 20 Feb 2020 13:41:21 +0100
+
+pendu-peda (1.0.4) unstable; urgency=medium
+
+  * Fix bugs
+
+ --  <ragnarok@Fenrir.home>  Thu, 20 Feb 2020 13:35:38 +0100
+
 pendu-peda (1.0.3) unstable; urgency=medium
 
   * Fix path desktop
