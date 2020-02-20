@@ -1,0 +1,66 @@
+pendu-peda (1.0.5+nmu1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload. Fix changelog bug
+
+ --  <ragnarok@Fenrir.home>  Thu, 20 Feb 2020 13:42:34 +0100
+
+pendu-peda (1.0.5) UNRELEASED; urgency=medium
+
+  [ ragnarok@Fenrir.home ]
+  * Fix bugs
+
+ --  <ragnarok@Fenrir.home>  Thu, 20 Feb 2020 13:41:21 +0100
+
+pendu-peda (1.0.4) unstable; urgency=medium
+
+  * Fix bugs
+
+ --  <ragnarok@Fenrir.home>  Thu, 20 Feb 2020 13:35:38 +0100
+
+pendu-peda (1.0.3) unstable; urgency=medium
+
+  * Fix path desktop
+
+ --  <ragnarok@Fenrir.home>  Wed, 19 Feb 2020 12:26:54 +0100
+
+pendu-peda (1.0.2) unstable; urgency=medium
+
+  * Fix size png desktop
+
+ --  <ragnarok@Fenrir.home>  Wed, 19 Feb 2020 12:22:29 +0100
+
+pendu-peda (1.0.1) unstable; urgency=medium
+
+  * Fix path troubles
+
+ --  <ragnarok@Fenrir.home>  Wed, 19 Feb 2020 09:50:44 +0100
+
+pendu-peda (1.0.0+nmu4) unstable; urgency=medium
+
+  * Fix desktop bugs
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 19:05:58 +0100
+
+pendu-peda (1.0.0+nmu3) unstable; urgency=medium
+
+  * Fix bash launcher 
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 18:56:40 +0100
+
+pendu-peda (1.0.0+nmu2) unstable; urgency=medium
+
+  * Fix bugs 
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 18:49:17 +0100
+
+pendu-peda (1.0.0+nmu1) unstable; urgency=medium
+
+  * First package 
+
+ --  <ragnarok@Fenrir.home>  Tue, 18 Feb 2020 18:44:17 +0100
+
+pendu-peda (1.0.0) unstable; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ --  <cyrille@cbiot.fr>  Tue, 18 Feb 2020 18:42:36 +0100
