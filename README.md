@@ -6,8 +6,8 @@ Hangman game with as themes the learning areas of cycles 2 and 3 of primary scho
 ## Build your package
 
 ```
-$ clone https://github.com/CyrilleBiot/pendu-peda.git
-$ git pendu-peda
+$ git clone https://github.com/CyrilleBiot/pendu-peda.git
+$ cd pendu-peda
 $ debuild -us -uc
 ```
 
